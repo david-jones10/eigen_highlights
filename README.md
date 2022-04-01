@@ -1,3 +1,19 @@
+<h1>To run application</h1>
+
+From <b>eigen_highlights</b> directory:
+
+<li>npm install</li>
+<li>npm start</li>
+
+<br />
+
+<p>
+  Browse to 
+  <a href='localhost:3000'>localhost:3000</a>
+</p>
+
+<hr />
+<br />
 <h1>Known issues/limitations</h1>
 
 <h2>Cross paragraph highlighting</h2>
@@ -26,3 +42,8 @@
 
 <h2>Improve styling</h2>
 <p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
+
+<br />
+
+<h2>Testing</h2>
+<p>Only on-page testing done to validate behaviour. Would be tested with component render/functional tests in a production application.</p>
