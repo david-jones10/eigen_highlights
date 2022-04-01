@@ -25,4 +25,4 @@
 <br />
 
 <h2>Improve styling</h2>
-<p>Not lots to add here!</p>
+<p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
