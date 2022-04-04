@@ -24,15 +24,14 @@ const DocPage = (props: IProps) => {
     const text = window.getSelection()?.toString() || '';
     if (text.length) {
       setSnippets((s) => s.concat(text));
-      setMarkup((m) => m.replace(text, `<span class=\'highlight\'>${text}</span>`));
-      // ISSUE - for repeated text eg single words, this only highlights first instance, not necessarily selected
+      setMarkup((m) => m.replace(text, `<span class='highlight'>${text}</span>`));
     }
   };
 
   const deselectSnippet = (id: number) => {
     const text = snippets[id];
     setSnippets((ss) => ss.filter((s, idx) => idx !== id));
-    setMarkup((m) => m.replace(`<span class=\'highlight\'>${text}</span>`, text));
+    setMarkup((m) => m.replace(`<span class='highlight'>${text}</span>`, text));
   };
 
   return (
