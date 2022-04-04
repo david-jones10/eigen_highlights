@@ -9,19 +9,48 @@
   width: 60vw;
   padding: 10px;
 
+  $highlight: #06c1e7;
+
   &::selection {
-    background: #045464;
+    background: $highlight;
     color: white;
   }
 
-  .highlight {
-    background-color: rgb(60, 60, 255);
+  .highlight-1 {
+    background: $highlight;
+    color: white;
+  
+    &::selection {
+      background: darken($highlight, 20%);
+    }
+  }
+
+  .highlight-2 {
+    background: darken($highlight, 20%);
     color: white;
 
     &::selection {
-      background: red;
+      background: darken($highlight, 40%);
     }
   }
+
+  .highlight-3 {
+    background: darken($highlight, 40%);
+    color: white;
+
+    &::selection {
+      background: darken($highlight, 60%);
+    }
+  }
+
+  // @for $i from 1 through 10 {
+  //   .highlight-#{$i} {
+  //     background: darken($highlight, calc($i*10%));
+  //   }
+  //
+  // &::selection {
+  //   background: darken($highlight, calc(calc($i+1)*10%));
+  // }
 }
 
 .snippet-drawer {
