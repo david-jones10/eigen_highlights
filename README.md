@@ -56,5 +56,10 @@ Clone the repo, and then from <b>eigen_highlights</b> directory:
 
 <br />
 
+<h2>Selection mode</h2>
+<p>Would be nice to add a selection mode option, eg auto-select on highlight, or offer popup to toggle highlight of current selection. This allows imprecise highlighters a chance to re-try and get accurate selection before adding to the list.</p>
+
+<br />
+
 <h2>Improve styling</h2>
 <p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
