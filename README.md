@@ -1,9 +1,19 @@
-<h1>To run application</h1>
+<h1>Highlights</h1>
+<p>A simple application built in React/TypeScript to demonstrate highlighting of text which:
+  <ul>
+    <li>Displays structured text as HTML, from a sample text block</li>
+    <li>Allows users to make multiple overlapping selections of that text</li>
+    <li>Shows all sections separately on the page</li>
+  </ul>
+</p>
 
-From <b>eigen_highlights</b> directory:
+<br />
 
-<li>npm install</li>
-<li>npm start</li>
+<h1>Installation</h1>
+
+Clone the repo, and then from <b>eigen_highlights</b> directory:
+<li><code>npm install</code></li>
+<li><code>npm start</code></li>
 
 <br />
 
@@ -12,12 +22,12 @@ From <b>eigen_highlights</b> directory:
   <a href='localhost:3000'>localhost:3000</a>
 </p>
 
-<hr />
 <br />
+
 <h1>Known issues/limitations</h1>
 
 <h2>Cross paragraph highlighting</h2>
-<p> <code>window.getSelection()</code> gives the text highlighted, but not any interceding html tags. The simple <code>text.replace()</code> does not deal with these - meaning cross paragraph highlights do not appear on page. </p>
+<p> <code>window.getSelection()</code> gives the text highlighted, but not any interceding html tags. The simple <code>text.replace()</code> does not deal with these - meaning cross paragraph highlights do not remain on page (although they do appear in the snippets panel). </p>
 <p><b>Potential solution:</b> RegEx to identify html tags, if found then close the span in first paragraph, reopen in next paragraph (as well as the pre/suffix spans) to highlight. This may need further consideration for highlighting across 2 or more paragraph/other html tags</p>
 
 <br />
@@ -35,8 +45,8 @@ From <b>eigen_highlights</b> directory:
 <br />
 
 <h2><code>dangerouslySetInnerHtml</code> requires proper sanitisation</h2>
-<p>Relatively safe as the content in selections is unlikely to contain dangerous code in and of itself, but it is possible to insert dangerous code with this.  </p>
-<p><b>Potential solution:</b> Proper sanitisation with or even an altogether different solution. Ref: <a href='https://stackoverflow.com/questions/64261021/sanitizers-vs-dangerouslysetinnerhtml'>https://stackoverflow.com/questions/64261021/sanitizers-vs-dangerouslysetinnerhtml</a></p>
+<p>Relatively safe in this context as the content in selections is based on a known object, but it is possible to insert malicious code using dangerouslySetInnerHtml.</p>
+<p><b>Potential solution:</b> Proper sanitisation of HTML with tools such as <a href='https://www.npmjs.com/package/dompurify'>DOMPurify</a> or even an altogether different solution.</p>
 
 <br />
 
