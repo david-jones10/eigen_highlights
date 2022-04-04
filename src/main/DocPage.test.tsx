@@ -16,7 +16,7 @@ test('renders DocPage and children', () => {
   expect(container.querySelector('.snippet')).not.toBeInTheDocument();
 });
 
-test('snippet renders', () => {
+test('snippet renders, fires button onclick', () => {
   let counter = 0;
   const { container } = render(<Snippet snippet="test selection string" onDeselect={() => counter++} />);
 
@@ -32,4 +32,3 @@ test('snippet renders', () => {
     expect(counter).toEqual(1);
   }
 });
-
