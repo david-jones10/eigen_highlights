@@ -29,7 +29,7 @@ Clone the repo, and then from <b>eigen_highlights</b> directory:
 
 <h2>Cross paragraph highlighting</h2>
 <p> <code>window.getSelection()</code> gives the text highlighted, but not any interceding html tags. The simple <code>text.replace()</code> does not deal with these - meaning cross paragraph highlights do not remain on page (although they do appear in the snippets panel). </p>
-<p><b>Potential solution:</b> RegEx to identify html tags, if found then close the span in first paragraph, reopen in next paragraph (as well as the pre/suffix spans) to highlight. This may need further consideration for highlighting across 2 or more paragraph/other html tags</p>
+<p><b>Potential solution:</b> RegEx to identify html tags, if found then close the span in first paragraph, reopen in next paragraph (as well as the pre/suffix spans) to highlight. This may need further consideration for highlighting across 2 or more paragraph/other html tags. I did play with <a href='https://www.npmjs.com/package/xpath-range'>xpath-range</a> which looked promising - giving the xpath of the start and end of selection, but I didn't find a clean way of parsing the selection in the range and converting in the html content string.</p>
 
 <br />
 
@@ -58,4 +58,3 @@ Clone the repo, and then from <b>eigen_highlights</b> directory:
 
 <h2>Improve styling</h2>
 <p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
-
