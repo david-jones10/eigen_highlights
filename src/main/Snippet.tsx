@@ -9,7 +9,9 @@ const Snippet = (props: IProps) => {
   return (
     <div className='snippet'>
       {snippet}
-      <button onClick={() => onDeselect()}>Remove</button>
+      <button className='remove' onClick={() => onDeselect()}>
+        Remove
+      </button>
     </div>
   );
 };
