@@ -12,6 +12,7 @@
 <h1>Installation</h1>
 
 Clone the repo, and then from <b>eigen_highlights</b> directory:
+
 <li><code>npm install</code></li>
 <li><code>npm start</code></li>
 
@@ -50,10 +51,11 @@ Clone the repo, and then from <b>eigen_highlights</b> directory:
 
 <br />
 
-<h2>Improve styling</h2>
-<p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
+<h2>Should have proper tests for highlight functionality</h2>
+<p>Wasn't sure of a quick solution for highlighting snippets of text programatically. Ideally would simulate this, and then check for snippets being added to the snippet drawer.</p>
 
 <br />
 
-<h2>Testing</h2>
-<p>Only on-page testing done to validate behaviour. Would be tested with component render/functional tests in a production application.</p>
+<h2>Improve styling</h2>
+<p>I've only put in very basic styling to position components, and for selection functionality. I have used <a href='https://react.semantic-ui.com'>Semantic React UI</a> in previous work for a styling framwork, but have intentionally kept this project lightweight.</p>
+
