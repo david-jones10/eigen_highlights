@@ -33,15 +33,25 @@ Clone the repo, and then from <b>eigen_highlights</b> directory:
 
 <br />
 
-<h2>Overlapping selection breaks highlighting of second highlight</h2>
-<p>The browser <code>::selection</code> formatting is shown, but the simple replace does not handle the content containing an intervening html tag</p>
-<p><b>Potential solution:</b> As previous - Regex to identify and close/reopen html tags as appropriate</p>
+<h2>Highlighting over the start of another highlight region doesn't work properly</h2>
+<p>The browser <code>::selection</code> formatting is shown, and the text is added to the list of snippets. However, the replace does not handle the content containing an intervening html tag properly, so the text is not correctly formatted.</p>
+<p><b>Potential solution:</b> More time spent working on this? Needs much more than regex to resolve, need to parse entire HTML to keep count of the open/closed tags at least.</p>
 
 <br />
 
 <h2>Single word highlighting</h2>
 <p>Simple <code>text.replace()</code> replaces the first instance of a match. If selecting single words or repeated short phrases, if this is not the first instance of this word/phrase the the wrong snippet is highlighted</p>
 <p><b>Potential solution:</b> Prevent selection if single word with no spaces and more than 1 instance of snippet.</p>
+
+<br />
+
+<h2>Remove button doesn't work cleanly for overlapping snippets</h2>
+<p>Need to be cleverer in storing snippets. In developing this, looked at xpaths as a possible solution for finding the current location- even this would need to be dynamically updated for each new highlight as they introduce new spans.</p>
+
+<br />
+
+<h2>This doesn't handle jsx/tsx self closed tags</h2>
+<p>Have always assumed that tags are original html tags, ie <code>&lt;tag>content&lt;/tag></code>, this does not account for self-closed tags eg <code> &lt;tag children={content} /> </code>seen in jsx/tsx.</p>
 
 <br />
 
