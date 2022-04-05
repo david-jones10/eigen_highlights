@@ -69,7 +69,10 @@ const DocPage = (props: IProps) => {
     if (text.length) {
       var sel = rangy.getSelection();
       var selHtml = sel.toHtml().trim();
-      alert(selHtml);
+
+      // possible togglable option, or as part of further select on highlight/key press function
+      const displaySelection = false;
+      if (displaySelection) alert(selHtml);
 
       setSnippets((s) => s.concat(text));
       // setHtml doesn't always match because it adds the preceeding opening tag!
